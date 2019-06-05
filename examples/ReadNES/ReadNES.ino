@@ -1,10 +1,10 @@
 #include <nespad.hpp>
 
-const int pin_pad1_clk = 2;
-const int pin_pad1_latch = 3;
-const int pin_pad1_data = 4;
+const int pin_nespad_clk = 2;
+const int pin_nespad_latch = 3;
+const int pin_nespad_data = 4;
 
-Nespad pad1 = Nespad(pin_pad1_clk, pin_pad1_latch, pin_pad1_data);
+Nespad nespad = Nespad(pin_nespad_clk, pin_nespad_latch, pin_nespad_data);
 
 void setup()
 {
@@ -13,16 +13,16 @@ void setup()
 
 void loop()
 {
-	pad1.read();
+	nespad.read();
 
-	if (pad1.btn.a)      Serial.println("A");
-	if (pad1.btn.b)      Serial.println("B");
-	if (pad1.btn.select) Serial.println("select");
-	if (pad1.btn.start)  Serial.println("start");
-	if (pad1.btn.up)     Serial.println("up");
-	if (pad1.btn.down)   Serial.println("down");
-	if (pad1.btn.left)   Serial.println("left");
-	if (pad1.btn.right)  Serial.println("right");
+	if (nespad.btn.a)      Serial.println("A");
+	if (nespad.btn.b)      Serial.println("B");
+	if (nespad.btn.select) Serial.println("select");
+	if (nespad.btn.start)  Serial.println("start");
+	if (nespad.btn.up)     Serial.println("up");
+	if (nespad.btn.down)   Serial.println("down");
+	if (nespad.btn.left)   Serial.println("left");
+	if (nespad.btn.right)  Serial.println("right");
 
 	delay(100);
 }
