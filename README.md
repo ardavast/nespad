@@ -1,5 +1,6 @@
 # nespad
-Nespad is an Arduino library that can be used to connect a NES gamepad to an Arduino.
+Nespad is an Arduino library that can be used to connect a NES gamepad to an Arduino.  
+The timing is implemented as described here: [The NES Controller Handler](https://tresi.github.io/nes/).
 
 ### Example
 ```cpp
